@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+<style>
+    /* Eleman Seçicisi */
+    p{
+        font-size: 12px;
+    }
+
+    /* Class Seçiciler */
+    .kirmizi{
+        color: red !important;
+    }
+
+    .alti-cizili{
+        text-decoration: underline;
+    }
+
+    /* id seçici */
+    #p1{
+        font-size: 30px;
+    }
+
+    /* attribute seçici */
+    [type="password"]{
+        color:red;
+    }
+
+    /* Sadece google'ı kapsar */
+    [href="https://google.com"]{
+        color:green;
+    }
+
+    /* Sa ile başlayan elemanların hepsini kapsar */
+    [href^="Sa"]{
+        color:purple;
+    }
+
+    /* Descendant seçici */
+    .kutu h1{
+        color: red;
+    }
+
+    /* child selector */
+    .kutu > h1{
+        text-decoration: underline;
+    }
+
+
+    /* pseudo-class : bir eleman belirli bir durumdayken stil kazandırır*/
+    #p1:hover{
+        background-color: lightblue;
+    }
+
+    .kirmizi:active{
+        background-color: lightgreen;
+    }
+
+
+    /* pseudo-element: bir elemanın belli kısımlarına stil kazandırır */
+    #p1::first-letter{
+        font-size:50px;
+    }
+
+
+
+</style>
+</head> 
+<body>
+    <p id="p1">Paragraf 1</p>
+    <p>Paragraf 2</p>
+    <p class="kirmizi alti-cizili">Paragraf 3</p>
+    <p class="alti-cizili">Paragraf 4</p>
+    <p class="kirmizi">Paragraf 5</p>
+
+
+    <input type="text">
+    <input type="password">
+
+
+    <a href="https://google.com">Google</a>
+    <a href="sayfa2.html">Sayfa 2</a>
+
+
+    <h1>Başlık</h1>
+
+    <div class="kutu">
+        <h1>Kutu İçerisindeki Başlık 1</h1>
+        <h1>Kutu İçerisindeki Başlık 2</h1>
+
+
+        <div>
+            <h1>Kutu İçerisindeki Div İçerisindeki Başlık</h1>
+        </div>
+    </div>
+</body>
+</html>
