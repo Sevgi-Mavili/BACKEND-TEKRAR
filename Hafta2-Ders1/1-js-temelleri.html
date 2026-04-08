@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <input type="number">
+    <input type="number">
+</head>
+<body>
+    
+
+
+
+    <!-- <script src="app.js"></script> -->
+    <script>
+        var b = 12; //Bunu tercih etmeyeceğiz
+        let a = "12";
+        const c = 12;
+
+        //global scope - block scope
+        let x; //tanımlama (define, declare)
+        x = 10; //atama (assign)
+
+        var v1 = 50;
+        var v1 = 50;
+
+        let v2 = 5;
+        let n = 10;
+
+        //scope (if, for, while...)
+        if(5 == 5)
+        {
+            let n = 20;
+            //n = 20;
+            // x = 5;
+            let y = 20;
+
+            let x = 15; //if.x
+            //console.log(x)
+
+            let v2 = 55;
+        }
+        
+        console.log(n)
+
+        //console.log(x)
+        console.log(v1)
+        // console.log(y) //Hata
+
+        console.clear();
+
+        const c1 = 10; //sabit değerli değişken
+
+        let d1;
+        d1 = 10.2;
+        d1 = "metin";
+        d1 = 'metin';
+        d1 = true;
+        d1 = ["ali", 1, true]
+        d1 = {isim: 'ali', yas: 45}
+        d1 = new Date();
+
+
+        //koşul:
+        if(c1 > 5){
+            console.log("5'den büyük")
+        }
+        else if(c1 >2){
+            console.log("2'den büyük")
+        }
+        else{
+            console.log("5'den küçük")
+        }
+
+
+        let i = 10;
+        while(i > 0){
+            console.log(i);
+            i--;
+        }
+
+        for(let i = 0; i < 10; i++){
+            if(i == 5){
+                break;
+            }
+            console.log(i);
+        }
+
+        //console.clear();
+
+        //fonksiyon
+
+        function topla(a, b){
+            return a + b;
+        }
+
+        let topla2 = function(a, b){
+            return a + b;
+        }
+        // let toplam = topla2(2,7);
+        // conosle.log(toplam)
+
+        //arrow function
+        let topla3 = (a, b) => {
+            return a + b;
+        }
+        
+        let toplam4 = (a, b) => a + b;
+         let toplam = topla3(5, 7);
+        console.log(toplam) //12
+        console.log(topla4(5, 7)) //12
+        console.log(topla2) //f(a, b)...
+
+
+
+        a = 10;
+        let gun = "";
+        switch (a) {
+            case 1:
+                gun = "Pazartesi"
+                break;
+            case 2:
+                gun = "Salı"
+                break;
+            case 3:
+                gun = "Çarşamba"
+                break;
+            case 4:
+                gun = "Perşembe"
+                break;
+            case 5:
+                gun = "Cuma"
+                break;
+            case 6:
+                gun = "Cumartesi"
+                break;
+            case 7:
+                gun = "Pazar"
+                break;
+
+            default:
+                gun = "hatalı"
+                break;
+        }
+        console.log(gun);
+
+
+    </script>
+</body>
+</html>

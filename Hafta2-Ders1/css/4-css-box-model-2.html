@@ -8,10 +8,13 @@
     <style>
         .background{
             background-color: lightgray;
+            width: 200px;
         }
 
         .box{
-            background-color: lightblue;
+            box-sizing: border-box;
+            background-color: grey;
+            color: white;
             height: 100px;
             width: 100px;
             padding-top: 5px;
@@ -19,8 +22,10 @@
 
             border: 1px solid black;
 
-            margin-top: 20px;
-            margin-bottom: 55px;
+            /* margin-top: 20px;
+            margin-bottom: 55px; */
+
+            display: inline-block;
         }
     </style>
 </head>
@@ -29,6 +34,5 @@
         <div class="box">Content</div>
         <div class="box">Content</div>
     </div>
-    
 </body>
 </html>
