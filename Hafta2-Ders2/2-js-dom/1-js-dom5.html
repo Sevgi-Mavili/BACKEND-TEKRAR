@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="i1" type="text">
+    <h1 id="baslik-1"></h1>
+    <h1 id="baslik-2"></h1>
+
+
+    <select id="select-1" onchange="onChangeFunction()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <script>
+        // i1El.addEventListener(...)
+
+        let baslik1El = document.getElementById('baslik-1');
+        let baslik2El = document.getElementById('baslik-2');
+
+        let i1El = document.getElementById('i1');
+        i1El.addEventListener('input', () => {
+            baslik1El.innerText = i1El.value;
+        });
+
+        //keydown: tuştan elimi çekince
+        //keyup: tuşa basınca
+        //click: tıklayınca
+        i1El.addEventListener('keyup', () => {
+            baslik2El.innerText = i1El.value;
+        });
+
+        i1El.addEventListener('mouseover', () => {
+           console.log("mouse input'un üzerinde")
+        });
+
+
+        // let selectEl = document.getElementById('select-1');
+        // selectEl.addEventListener('change', () => {
+        //     console.log("Seçilen değer:", selectEl.value)
+        // })
+
+        // selectEl.addEventListener('change', onChangeFunction);
+
+
+        function onChangeFunction() {
+            let selectEl = document.getElementById('select-1');
+            console.log("Seçilen değer:", selectEl.value)
+        }
+
+
+        
+
+
+    </script>
+</body>
+</html>

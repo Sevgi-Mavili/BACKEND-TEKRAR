@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="s1" type="number">
+    <span>+</span>
+    <input id="s2" type="number">
+    <button onclick="topla()">=</button>
+    <input id="sonuc" type="number" readonly>
+
+    <script>
+        function topla(){
+            let s1El = document.getElementById('s1');
+            let s1Val = parseInt(s1El.value);
+
+            let s2El = document.getElementById('s2');
+            let s2Val = parseInt(s2El.value);
+
+            let sonuc = s1Val + s2Val;
+
+            // console.log(sonuc);
+            let sonucEl = document.getElementById('sonuc');
+            sonucEl.value = sonuc;
+        }
+
+    </script>
+</body>
+</html>

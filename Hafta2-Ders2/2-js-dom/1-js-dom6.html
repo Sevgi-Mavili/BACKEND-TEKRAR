@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input maxlength="20" oninput="karakterKontrol(event)" id="tweet" type="text"> -->
+    <!-- <input  oninput="karakterKontrol(event)" id="tweet" type="text"> -->
+    <textarea  oninput="karakterKontrol(event)" id="tweet" type="text"></textarea>
+    <span>Karakter sayısı: </span>
+
+    <script>
+        // let twEl = document.getElementById('tweet');
+
+        function karakterKontrol(event){
+            let twEl = event.target;
+            if(twEl.value.length > 20){
+                console.log(twEl.value.length)
+                twEl.value = twEl.value.slice(0, 20); //yeni, metinde kırpma işlemi yapar
+            }
+            else if(twEl.value.length >= 10){
+                twEl.style.color = 'red'; //yeni, style ile css özelliklerine erişebiliz
+            }
+            else{
+                twEl.style.color = 'black';
+
+            }
+        }
+
+    </script>
+</body>
+</html>
